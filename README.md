@@ -1,2 +1,2 @@
 # JorDreSouza.github.io
-Webpage for Meta's Front-end developer course
+ A webpage for the Meta front-end developer course

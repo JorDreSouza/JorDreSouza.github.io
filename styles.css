@@ -1,0 +1,340 @@
+/* Appliying the universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+    font-weight: 400;
+}
+
+/* Inserting the background image that is used for the color and tone */
+body {
+    transform-origin: center;
+    background-image: url("project_images/abstract-luxury-blur-dark-grey-black-gradient-used-as-background-studio-wall-display-your-products.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #6363633d;
+    background-blend-mode: lighten; /* Lightens the background for more clarity */
+
+}
+
+/* Building the header*/
+header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color:#050505c7;
+}
+header img {
+    width: 450px;
+    height: 60px;
+    padding-top: 1rem;
+    margin: auto;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Setting up the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.navbar li {
+    display: inline-block;   
+    padding: 0.1rem 0.6rem;
+    margin: 1rem 0.8rem 1.2rem;
+}
+
+/* Customizing navigation links */
+a {
+    color: #dbdbdb;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transform: scale(1.0);
+}
+.navbar li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+/* Adding the promo image (hero) */
+.hero {
+    width: 100%;
+    height: 80vh;
+    color:#dbdbdb;
+    margin-bottom: 5rem;
+    background-image: url("project_images/heroimage.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    animation-name: herotransition;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    &:hover{
+        animation-play-state: paused;   /*The animation is paused when the mouse is hovered over the image */
+        cursor: pointer;
+    }
+    /* Sets up the background image's transparency animation*/
+}
+
+/* Animation for the background image's transparency */
+  @keyframes herotransition {
+    0% {
+        color:#f7f7f7;
+        background-color: rgba(0, 0, 0, 0.45);
+        background-blend-mode: darken
+      }
+      20% {
+        color:#f7f7f7;
+        background-color: rgba(0, 0, 0, 0.45);
+        background-blend-mode: darken
+      }
+      40% {
+        color:#f7f7f700;
+        background-color: rgba(0, 0, 0, 0)
+      }
+      60% {
+        color:#f7f7f700;
+        background-color: rgba(0, 0, 0, 0)
+      }
+      80% {
+        color:#ffffff;
+        background-color: rgba(0, 0, 0, 0.45);
+        background-blend-mode: darken
+      }
+      100% {
+        color:#ffffff;
+        background-color: rgba(0, 0, 0, 0.45);
+        background-blend-mode: darken
+      }
+     /* The animation increases the opacity of the image while at the same time increasing the transparency of the text */
+    }
+
+/* Adjusting the text displayed on top of the hero image */
+.hero-container {
+    padding-top: 18rem;
+    display: flex;
+    flex-direction: column;     /* Aligns texts vertically */
+    text-align: center;
+    line-height: 2;
+}
+.hero h1 {
+    font-size: 3.3rem;
+}
+.hero h4 {
+    font-size: 1.6rem;
+}
+
+/* Inserting the image of the products in each respective column using "flex" */
+#products {
+    margin: 0 1rem;
+}
+.card-columns {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+}
+.card {
+    width: 100%;
+    height: 500px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+.card-img-cntr {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;   /* Cuts parts of the image that overflow the container */
+    text-align: center;
+}
+
+/* Fits the image inside its container and lowering the brightness */
+.card img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    object-fit: cover;
+    align-content: center;
+    filter: brightness(60%);
+}
+
+/* increase brigthness of product image when hovering with mouse or tapping with smartphone and tablet */
+.card img:hover {
+    transform: scale(1.08);     /* Zooms the image inside the div when hovered */
+    filter: brightness(100%);
+}
+
+.card-info {
+    top: 25%;
+    left: 25%;
+    position: absolute;     /* This makes it so that the text can be moved freely on top of the image */
+    font-size: 2.5rem;
+}
+
+.card:hover {
+    color: #ffffff1a;   /* Makes the text semi-transparent when image is hovered */
+ }
+ 
+ /* Customizing the "Shop" button */
+.btn-cntr {
+    box-shadow: 0 8px 16px 0 rgba(199, 199, 199, 0.308);
+    text-align: center;
+}
+
+.card-btn {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    transform: scale(1.0);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.card a:hover {
+     background-color: #ffffff;
+     color: #000000;
+}
+
+/* Setting the footer of the page */
+footer {
+    padding-top: 2rem;
+    margin-top: 13rem;
+    background-color:#c5c5c57c;
+    color: #fcfcfc;
+}
+
+/* The footer is split into 2 columns */
+.footer-cntr {
+    display: flex;
+    margin-bottom: -1rem;
+}
+
+/* Buiilding the "about" section */
+#about {
+    text-align: start;
+    border-right: 1px solid #f5f5f575;
+    flex:1;
+}
+
+#about h2 {
+    text-align: center;
+}
+
+#about h4 {
+    padding-top: 2rem;
+    margin: 0 4rem 2em;
+}
+
+/* Implementing the footer links */
+.footer-menu h2 {
+    font-size: 1.4em;
+    color: #fcfcfc;
+    padding-bottom: 1rem;
+}
+
+.footer-menu {
+    flex:1;
+    padding-left: 2rem;
+}
+
+/* Customizing the links */
+#footer-links {
+    list-style: none;
+    line-height: 2rem;
+}
+
+#footer-links a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+/* Adjusting the copyright and logo container */
+.copyright-cntr {
+    display: flex;
+    margin-top: 2rem;
+    border-top: 1px solid #f5f5f575;
+}
+
+footer img {
+    width: 100px;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    flex: 1;
+}
+
+.copyright {
+    padding: 0 2rem 2rem 2rem;
+    margin-top: 1rem;
+    text-align: end;
+    flex: 1;
+}
+
+/* Implementing the media queries for different resolutions and devices */
+@media screen and (max-width: 1024px){
+        .hero {
+            max-width: 100%;
+            height: 80vh;
+            background-position: center;
+        }
+        .card-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }    
+        .card {
+            padding-top: 5em;
+            height: 450px;
+        }
+        .card-img-cntr img {
+            width: 100%;
+            transition: all 0.4s;
+        }
+        .card-info {
+            top: 45%;
+            left: 33%;
+        }    
+        .footer-cntr {
+            display: block;
+        }
+        #about {
+            border-bottom: 1px solid #f5f5f575;  
+        }
+        #about h4 {
+            margin-bottom: 4rem;
+        }
+        .footer-menu {
+            margin-top: 1rem;
+        }
+        .footer-menu h2, #footer-links {
+            padding-left: 2rem;
+        }
+        #footer-links a {
+            padding-bottom: 1.0rem;
+            display: inline-flex;
+        }
+        
+    @media screen and (min-width: 320px) and (max-width:980px) and (orientation:landscape){
+        .hero-container {
+            padding-top: 7rem;
+        }
+        .card-info {
+            left: 18%;
+            font-size: 1.7rem;
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.4s;
+            object-fit: cover;
+            align-content: center;
+            filter: brightness(60%);
+        }
+        .card-columns {
+            flex-wrap: nowrap;
+        }
+    }
+}
