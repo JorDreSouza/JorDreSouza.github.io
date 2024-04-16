@@ -113,7 +113,7 @@ a {
 
 /* Adjusting the text displayed on top of the hero image */
 .hero-container {
-    padding-top: 18rem;
+    padding-top: 15rem;
     display: flex;
     flex-direction: column;     /* Aligns texts vertically */
     text-align: center;
@@ -274,10 +274,15 @@ footer img {
 
 /* Implementing the media queries for different resolutions and devices */
 @media screen and (max-width: 1024px){
+         header img {
+            width: 300px;
+            height: 50px;
+        }
         .hero {
             max-width: 100%;
-            height: 80vh;
-            background-position: center;
+        }
+        .hero-container {
+            font-size: 2.8rem;
         }
         .card-columns {
             display: flex;
@@ -293,8 +298,8 @@ footer img {
             transition: all 0.4s;
         }
         .card-info {
-            top: 45%;
-            left: 33%;
+            top: 42%;
+            left: 28%;
         }    
         .footer-cntr {
             display: block;
@@ -317,11 +322,14 @@ footer img {
         }
         
     @media screen and (min-width: 320px) and (max-width:980px) and (orientation:landscape){
+        .hero {
+            height:70vh;
+        }
         .hero-container {
             padding-top: 7rem;
         }
         .card-info {
-            left: 18%;
+            left: 8%;
             font-size: 1.7rem;
         }
         .card img {
