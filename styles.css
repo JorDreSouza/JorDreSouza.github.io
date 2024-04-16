@@ -10,7 +10,7 @@
 /* Inserting the background image that is used for the color and tone */
 body {
     transform-origin: center;
-    background-image: url("project_images/Background.jpg");
+    background-image: url("Images/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #6363633d;
@@ -63,7 +63,7 @@ a {
     height: 80vh;
     color:#dbdbdb;
     margin-bottom: 5rem;
-    background-image: url("project_images/heroimage.jpg");
+    background-image: url("Images/heroimage.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
