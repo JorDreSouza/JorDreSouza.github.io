@@ -10,7 +10,7 @@
 /* Inserting the background image that is used for the color and tone */
 body {
     transform-origin: center;
-    background-image: url("project_images/abstract-luxury-blur-dark-grey-black-gradient-used-as-background-studio-wall-display-your-products.jpg");
+    background-image: url("project_images/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #6363633d;
